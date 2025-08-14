@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PayX Demo — Sign in</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Firebase compat (works on GitHub Pages without bundlers) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+</head>
+<body class="bg">
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-name">PayX Demo</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <!-- Left visual card on desktop -->
+    <aside class="panel-visual" aria-hidden="true">
+      <div class="panel-card">
+        <h2>Practice mode</h2>
+        <p>Responsive layout with a desktop side card. Purely a demo — no real credentials are stored.</p>
+      </div>
+    </aside>
+
+    <!-- Right: form -->
+    <section class="panel-form">
+      <h1 class="title">Welcome back</h1>
+      <p class="muted">
+        Don’t have an account?
+        <a href="#" class="link">Sign up</a>
+      </p>
+
+      <form id="loginForm" class="form" autocomplete="off">
+        <label class="field">
+          <span>Email / Phone Number <span class="req">*</span></span>
+          <input id="username" type="text" required placeholder="Email / Phone Number" />
+        </label>
+
+        <div class="demo-banner" role="note">
+          Demo only — we ignore what you type and write a generated test entry to the database.
+        </div>
+
+        <button class="btn-cta" type="submit">Sign in</button>
+
+        <div class="links-row">
+          <a href="#" class="link">Forgot password?</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
